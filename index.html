@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Victor/Pepo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+   <audio id="miAudio" src="https://trneodavo.000webhostapp.com/Pams/Flower.mp3" preload="auto"></audio>
+    
+   <div class="Contenedor-Binicio" id="botonReproducir">
+        <a href="#" class="btn-neon" id="BVer">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <span id="span4"></span>
+            Bañate👀
+        </a>
+   </div>
+
+   <div class="Con-Emergente">
+        <div id="resultado" class="btn-neon1">
+            <p id="res">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                ¡Solo quería hacerme presente con este pequeño detalle!
+            </p>    
+            <button id="BotonCerrar" class="Button">Cerrar</button>
+        </div>
+   </div>
+
+   <div class="Con-2">
+        <h1 id="Titulo"> Elije una Opción 🤔 </h1>
+        <div class="Con">
+            <button class="btn-neon" id="B1"> Opción 1🫣</button>
+            <button class="btn-neon" id="B12"> Opción 2🫣</button>
+        </div>
+   </div>
+
+    <main class="Contenedor">
+        <canvas id="Flor" class="Flor" width="800" height="600"></canvas>
+
+        <div class="Texto">
+            <!-- Cambiará dinámicamente según la opción -->
+            <h2 id="Text">Mensaje por defecto</h2>
+            <p id="deslizarMensaje" style="display: none; font-size: 14px; color: lightgray;">Deslizar la pantalla</p> <!-- Mensaje pequeño añadido -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="Dis.js"></script>
+
+    <!-- Script adicional para cambiar los mensajes dinámicamente -->
+    <script>
+        document.getElementById('B1').addEventListener('click', function() {
+            document.getElementById('Text').innerText = "Para que te alegres el día :+)"; // Mensaje para Opción 1
+            document.getElementById('deslizarMensaje').style.display = "block"; // Mostrar mensaje de deslizar
+        });
+
+        document.getElementById('B12').addEventListener('click', function() {
+            document.getElementById('Text').innerText = "Esto es lo que tenía pensado para ti.<3"; // Mensaje para Opción 2
+            document.getElementById('deslizarMensaje').style.display = "block"; // Mostrar mensaje de deslizar
+        });
+    </script>
+
+</body>
+</html>
